@@ -128,10 +128,10 @@
 <h2>¿Cómo comprar?</h2><p class="sub">Realiza el pago y envía tu pedido para coordinar la entrega digital.</p>
 <div class="payment">
 <div><h3>Compra por S/ 9.90</h3>
-<ol class="steps"><li>Escanea el QR de Yape desde tu aplicación.</li><li>Realiza el pago de <strong>S/ 9.90</strong>.</li><li>Envía la constancia por WhatsApp mediante el botón de abajo.</li><li>El vendedor verificará el pago y te enviará el enlace de descarga.</li></ol>
+<ol class="steps"><li>Escanea el QR de Yape desde tu aplicación.</li><li>Realiza el pago de <strong>S/ 9.90</strong>.</li><li>Envía la constancia por Messenger mediante el botón de abajo.</li><li>El vendedor verificará el pago y te enviará el enlace de descarga.</li></ol>
 <p class="caution">Por seguridad, espera la confirmación del vendedor. No compartas claves ni códigos de seguridad.</p>
-<a id="whatsappButton" class="btn" href="#" target="_blank" rel="noopener">💬 ENVIAR PEDIDO POR WHATSAPP</a>
-<p class="small">El número no se muestra escrito en la página; el botón necesita configurarse con el enlace de WhatsApp del vendedor antes de publicar.</p>
+<a id="messengerButton" class="btn" href="https://m.me/elbereano" target="_blank" rel="noopener noreferrer">💬 COMPRAR POR MESSENGER</a>
+<p class="small">¿Tienes dudas? Escríbenos por Messenger desde la página oficial de EL BEREANO. No necesitas compartir tu número de teléfono.</p>
 </div>
 <div class="payment-qr"><img class="qr" src="assets/qr-yape.png" alt="Código QR para pagar por Yape"><p class="center small">Escanea este QR con Yape</p></div>
 </div></div></section>
@@ -144,22 +144,10 @@
 </main>
 <footer><div class="wrap"><strong>EL BEREANO — ESTUDIOS BÍBLICOS</strong><br>Material digital para el estudio bíblico.<br><span>Antes de publicar, verifica los derechos comerciales de todos los componentes del producto.</span></div></footer>
 <script>
-/* CONFIGURACIÓN: coloca aquí el enlace wa.me de tu WhatsApp de ventas.
-   Ejemplo de formato: https://wa.me/519XXXXXXXX?text=Hola%2C%20quiero%20comprar%20la%20Biblia%20Ilustrada
-   El número no se muestra en el texto de la página, pero sí forma parte del enlace. */
-const WHATSAPP_LINK = "";
-const btn = document.getElementById("whatsappButton");
-if (WHATSAPP_LINK.trim()) {
-  btn.href = WHATSAPP_LINK;
-} else {
-  btn.href = "mailto:?subject=Pedido%20Biblia%20Ilustrada%20EL%20BEREANO&body=Quiero%20comprar%20la%20Biblia%20Ilustrada%20por%20S%2F%209.90.%20Por%20favor%20indiquenme%20como%20coordinar%20la%20entrega.";
-  btn.addEventListener("click", function(e) {
-    if (!WHATSAPP_LINK.trim()) {
-      e.preventDefault();
-      alert("Antes de publicar, configura el enlace de WhatsApp en el archivo index.html. Para mantener privado tu número personal, puedes usar un número exclusivo de ventas.");
-    }
-  });
-}
+/* El botón abre Messenger de la página EL BEREANO.
+   Si Facebook cambia el nombre de usuario de la página, actualiza este enlace. */
+const MESSENGER_LINK = "https://m.me/elbereano";
+document.getElementById("messengerButton").href = MESSENGER_LINK;
 </script>
 </body>
 </html>
